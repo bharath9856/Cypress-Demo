@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"c1125c2cd7e476bbde3eff2c0d36994e","name":"cypress/e2e/1-getting-started/newTest.spec.cy.js","statistic":{"failed":0,"broken":2,"skipped":0,"passed":0,"unknown":0,"total":2}},{"uid":"f0e5a3486f211a49cdd3cca277fba252","name":"example to-do app","statistic":{"failed":0,"broken":0,"skipped":0,"passed":7,"unknown":0,"total":7}}]}
