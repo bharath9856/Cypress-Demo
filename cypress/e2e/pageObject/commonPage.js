@@ -15,7 +15,7 @@ export class CommonPage{
     }
 
     clickOnUserDropdown(){
-        cy.get(".oxd-userdropdown").click()
+        cy.get(".oxd-userdropdown").click({force:true})
     }
 
     selectUserDropdownList(option){

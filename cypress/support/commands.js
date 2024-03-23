@@ -27,8 +27,14 @@
 
 
 Cypress.Commands.add("login",(userName,password)=>{
-    cy.visit('/web/index.php/auth/login');
-    cy.get('input[name="username"]').clear().type(userName);
-    cy.get('input[name="password"]').clear().type(password,{log:false});
-    cy.get("button:not([disabled])").contains("Login").click();
+
+    cy.session([userName,password],()=>{
+        cy.visit('/');
+        cy.get('input[name="username"]').clear().type(userName);
+        cy.get('input[name="password"]').clear().type(password,{log:false});
+        cy.get("button:not([disabled])").contains("Login").click();
+
+    })
+
+   
 })

@@ -12,6 +12,10 @@ describe("User should test OrangeHRM", () => {
         cy.login("Admin","admin123")
     })
 
+    beforeEach(()=>{
+        cy.visit("/web/index.php/dashboard/index")
+    })
+
     it("User should navigate to dashboard",()=>{
         commonPage.assertHeaderTitle().should("include.text","Dashboard");
     })
@@ -22,12 +26,20 @@ describe("User should test OrangeHRM", () => {
         leavePage.roleNavigation("Apply");
     })
 
+    it("Nagative scenario, User should validate unimpliment header title",()=>{
+        commonPage.assertHeaderTitle().should("have.text","");
+    })
+
 
 
     after(()=>{
         cy.wait(1000)
-        common.clickOnUserDropdown();
-        common.selectUserDropdownList("Logout")
+        commonPage.clickOnUserDropdown();
+        commonPage.selectUserDropdownList("Logout")
+        cy.wait(1000)
+        Cypress.session.clearAllSavedSessions()
+        
     })
+
 
 });

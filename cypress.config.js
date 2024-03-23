@@ -13,9 +13,10 @@ module.exports = defineConfig({
     saveAllAttempts: false,
   },
   e2e: {
-    chromeWebSecurity:true,
+    chromeWebSecurity:false,
     experimentalSessionAndOrigin:true,
-    defaultCommandTimeout: 10000,
+    testIsolation:"off",
+    defaultCommandTimeout: 5000,
     baseUrl: "https://opensource-demo.orangehrmlive.com",
     setupNodeEvents(on, config) {
       // implement node event listeners here
