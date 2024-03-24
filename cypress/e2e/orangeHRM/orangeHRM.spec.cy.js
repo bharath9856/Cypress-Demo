@@ -1,12 +1,12 @@
 ///<reference types = "cypress"/>
-import { CommonPage } from "../pageObject/commonPage";
-import { LeavePage } from "../pageObject/leavePage";
+import { CommonPage } from "../orangeHRMPageObject/commonPage"; 
+import { LeavePage } from  "../orangeHRMPageObject/leavePage";
 
 const commonPage = new CommonPage();
 const leavePage = new LeavePage();
 
 
-describe("User should test OrangeHRM", () => {
+describe("Orange HRM", () => {
 
     before(()=>{
         cy.login("Admin","admin123")
