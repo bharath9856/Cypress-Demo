@@ -33,6 +33,9 @@ In terminal
 
 # To open allure report
  In terminal
+ 
+ // to execute
  1. npm test
- 2. allure serve
+ // to open allure reports
+ 3. allure serve
 
