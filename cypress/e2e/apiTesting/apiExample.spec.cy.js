@@ -9,7 +9,7 @@ describe('API Testing', () => {
             method: 'GET',
             url: `https://gorest.co.in/public/v2/users`,
             headers: {
-                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'), // Generate access token from https://gorest.co.in/consumer/login and add the same to cypress.env.json
+                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'),
             }
         }).then((response) => {
             cy.task('log', 'Get response: ' + JSON.stringify(response.body))
@@ -22,7 +22,7 @@ describe('API Testing', () => {
             method: 'POST',
             url: 'https://gorest.co.in/public/v2/users',
             headers: {
-                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'), // Generate access token from https://gorest.co.in/consumer/login and add the same to cypress.env.json
+                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'),
             },
             body: {
                 "name": userName,
@@ -46,7 +46,7 @@ describe('API Testing', () => {
             method: 'GET',
             url: `https://gorest.co.in/public/v2/users/${userId}`,
             headers: {
-                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'), // Generate access token from https://gorest.co.in/consumer/login and add the same to cypress.env.json
+                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'),
             }
         }).then((response) => {
             cy.task('log', 'Get response: ' + JSON.stringify(response.body))
@@ -64,7 +64,7 @@ describe('API Testing', () => {
             method: 'PUT',
             url: `https://gorest.co.in/public/v2/users/${userId}`,
             headers: {
-                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'), // Generate access token from https://gorest.co.in/consumer/login and add the same to cypress.env.json
+                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'),
             },
             body: {
                 "name": `${name}`,
@@ -86,7 +86,7 @@ describe('API Testing', () => {
             method: 'DELETE',
             url: `https://gorest.co.in/public/v2/users/${userId}`,
             headers: {
-                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'), // Generate access token from https://gorest.co.in/consumer/login and add the same to cypress.env.json
+                'authorization': 'Bearer ' + Cypress.env('ACCESS_TOKEN'),
             }
         }).then((response) => {
             cy.task('log', 'Deleted response: ' + JSON.stringify(response.body))
