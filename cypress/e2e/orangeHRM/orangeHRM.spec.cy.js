@@ -1,9 +1,9 @@
 ///<reference types = "cypress"/>
 import { CommonPage } from "../orangeHRMPageObject/commonPage"; 
-import { LeavePage } from  "../orangeHRMPageObject/leavePage";
+import { PIMPage } from  "../orangeHRMPageObject/pimPage";
 
 const commonPage = new CommonPage();
-const leavePage = new LeavePage();
+const pimPage = new PIMPage();
 
 
 describe("Orange HRM", () => {
@@ -20,10 +20,16 @@ describe("Orange HRM", () => {
         commonPage.assertHeaderTitle().should("include.text","Dashboard");
     })
 
-    it("User should Apply the leave",()=>{
-        commonPage.selectSidebarMenu("Leave");
-        commonPage.assertHeaderTitle().should("include.text","Leave");
-        leavePage.roleNavigation("Apply");
+    it("User should add employee in PIM",()=>{
+        commonPage.selectSidebarMenu("PIM");
+        commonPage.assertHeaderTitle().should("include.text","PIM");
+        commonPage.roleNavigation("Add Employee");
+        pimPage.enterEmployeeFirstName("Bharath");
+        pimPage.enterEmployeeMiddleName("Simha Reddy")
+        pimPage.enterEmployeeLastName("Challa")
+        commonPage.clickButtonByName("Save")
+
+
     })
 
     it("Nagative scenario, User should validate unimpliment header title",()=>{
