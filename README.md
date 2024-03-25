@@ -17,7 +17,8 @@ cd ../cypressDemo
 
 In terminal run
 1. npm i
-2. npm audit fix --force
+2. npx cypress install
+3. npm audit fix --force (optional)
 
 
 # To open cypress dashboard
