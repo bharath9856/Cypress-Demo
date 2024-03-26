@@ -9,7 +9,7 @@ Required tools
 
 # Change Directory
 
-In terminal change directory
+In terminal change directory.
   cd ../cypressDemo
 
 
