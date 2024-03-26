@@ -3,8 +3,8 @@
 Note:  // Generate access token from https://gorest.co.in/consumer/login and add the same to cypress.env.json
 # Pre Request
 
-IDE : VS code
-NodeJs
+1.IDE : VS code
+2.NodeJs
 
 
 # Change Directory
