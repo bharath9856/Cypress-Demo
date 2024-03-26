@@ -1,6 +1,6 @@
 # Cypress Demo
 
-Note:  // Generate access token from https://gorest.co.in/consumer/login and add the same to cypress.env.json
+
 # Pre Request
 
 1. IDE : VS code
@@ -35,6 +35,8 @@ In terminal
 # To open allure report
  In terminal
  
-  1. npm test // to execute
+ 1. npm test // to execute
  2. allure serve // to open allure reports
+
+Note:  // Generate access token from https://gorest.co.in/consumer/login and add the same to cypress.env.json
 
