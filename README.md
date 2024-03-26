@@ -10,7 +10,7 @@ Required tools
 # Change Directory
 
 In terminal change directory
-cd ../cypressDemo
+  cd ../cypressDemo
 
 
 # Run the commands in terminal to setup cypress
@@ -30,7 +30,7 @@ In terminal run
 # To run in Headless mode
 
 In terminal
-1.npx cypress run
+1. npx cypress run
 
 # To open allure report
  In terminal
