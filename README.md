@@ -2,9 +2,9 @@
 
 
 # Pre Request
-
-1. IDE : VS code
-2. NodeJs
+Required tools
+  1. IDE : VS code
+  2. NodeJs
 
 
 # Change Directory
